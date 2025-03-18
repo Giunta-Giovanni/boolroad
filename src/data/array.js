@@ -51,7 +51,7 @@ export const trips = [
         dataPartenza: "2025-11-05",
         dataRitorno: "2025-11-20",
         abstract: "Un viaggio nella storia tra le rovine misteriose della civiltà Inca.",
-        image: "/trip_img/machu_picchu-llama.jpg",
+        image: "/trip_img/machu-picchu-llama.jpg",
         jumbo_image: "https://example.com/images/machu_picchu_jumbo.jpg"
     },
     {
