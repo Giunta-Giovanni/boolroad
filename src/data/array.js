@@ -3,82 +3,92 @@ const trips = [
     {
         id: 1,
         nome: "Tokyo, Giappone",
-        partenza: "2025-07-10",
-        ritorno: "2025-07-20",
-        abstract: "Scopri la fusione tra tradizione e modernità nella vibrante capitale del Giappone, tra templi, grattacieli e sushi incredibile.",
-        image: "https://example.com/images/tokyo.jpg"
+        dataPartenza: "2025-06-15",
+        dataRitorno: "2025-06-30",
+        abstract: "Esplora la città futuristica di Tokyo tra tecnologia, cultura pop e tradizione.",
+        image: "https://example.com/images/tokyo.jpg",
+        jumbo_image: "https://example.com/images/tokyo_jumbo.jpg"
     },
     {
         id: 2,
         nome: "New York, USA",
-        partenza: "2025-05-15",
-        ritorno: "2025-05-25",
-        abstract: "La città che non dorme mai ti aspetta con i suoi grattacieli iconici, Broadway, Central Park e una cultura cosmopolita unica.",
-        image: "https://example.com/images/newyork.jpg"
+        dataPartenza: "2025-07-10",
+        dataRitorno: "2025-07-25",
+        abstract: "Vivi l'energia della Grande Mela tra grattacieli, Broadway e Central Park.",
+        image: "https://example.com/images/new_york.jpg",
+        jumbo_image: "https://example.com/images/new_york_jumbo.jpg"
     },
     {
         id: 3,
         nome: "Santorini, Grecia",
-        partenza: "2025-06-05",
-        ritorno: "2025-06-15",
-        abstract: "Goditi i tramonti mozzafiato e le tipiche case bianche con cupole blu in questa meravigliosa isola delle Cicladi.",
-        image: "https://example.com/images/santorini.jpg"
+        dataPartenza: "2025-08-05",
+        dataRitorno: "2025-08-20",
+        abstract: "Rilassati tra le case bianche e le acque cristalline di Santorini.",
+        image: "https://example.com/images/santorini.jpg",
+        jumbo_image: "https://example.com/images/santorini_jumbo.jpg"
     },
     {
         id: 4,
         nome: "Dubai, Emirati Arabi Uniti",
-        partenza: "2025-09-01",
-        ritorno: "2025-09-10",
-        abstract: "Vivi il lusso e la modernità di Dubai tra grattacieli incredibili, deserti dorati e shopping esclusivo.",
-        image: "https://example.com/images/dubai.jpg"
+        dataPartenza: "2025-09-01",
+        dataRitorno: "2025-09-15",
+        abstract: "Scopri il lusso sfrenato e l'architettura avveniristica di Dubai.",
+        image: "https://example.com/images/dubai.jpg",
+        jumbo_image: "https://example.com/images/dubai_jumbo.jpg"
     },
     {
         id: 5,
         nome: "Maldive, Oceano Indiano",
-        partenza: "2025-12-10",
-        ritorno: "2025-12-20",
-        abstract: "Rilassati su spiagge paradisiache, esplora la barriera corallina e goditi un soggiorno in un bungalow sull’acqua.",
-        image: "https://example.com/images/maldive.jpg"
+        dataPartenza: "2025-10-10",
+        dataRitorno: "2025-10-25",
+        abstract: "Goditi un paradiso tropicale con spiagge bianche e mare cristallino.",
+        image: "https://example.com/images/maldive.jpg",
+        jumbo_image: "https://example.com/images/maldive_jumbo.jpg"
     },
     {
         id: 6,
         nome: "Machu Picchu, Perù",
-        partenza: "2025-08-20",
-        ritorno: "2025-08-30",
-        abstract: "Esplora una delle meraviglie del mondo e immergiti nella storia degli Inca tra paesaggi mozzafiato sulle Ande.",
-        image: "https://example.com/images/machupicchu.jpg"
+        dataPartenza: "2025-11-05",
+        dataRitorno: "2025-11-20",
+        abstract: "Un viaggio nella storia tra le rovine misteriose della civiltà Inca.",
+        image: "https://example.com/images/machu_picchu.jpg",
+        jumbo_image: "https://example.com/images/machu_picchu_jumbo.jpg"
     },
     {
         id: 7,
-        nome: "Reykjavik, Islanda",
-        partenza: "2025-10-15",
-        ritorno: "2025-10-25",
-        abstract: "Ammira l’aurora boreale, esplora geyser e lagune termali e scopri la natura incontaminata dell’Islanda.",
-        image: "https://example.com/images/reykjavik.jpg"
+        nome: "Parigi, Francia",
+        dataPartenza: "2025-12-01",
+        dataRitorno: "2025-12-15",
+        abstract: "Romanticismo, arte e cultura nella città dell'amore.",
+        image: "https://example.com/images/parigi.jpg",
+        jumbo_image: "https://example.com/images/parigi_jumbo.jpg"
     },
     {
         id: 8,
-        nome: "Città del Capo, Sudafrica",
-        partenza: "2025-11-05",
-        ritorno: "2025-11-15",
-        abstract: "Un mix perfetto tra spiagge, montagne e cultura, con la possibilità di visitare la celebre Table Mountain e il Capo di Buona Speranza.",
-        image: "https://example.com/images/capetown.jpg"
+        nome: "Sydney, Australia",
+        dataPartenza: "2026-01-10",
+        dataRitorno: "2026-01-25",
+        abstract: "Scopri le meraviglie di Sydney tra l'Opera House e le spiagge dorate.",
+        image: "https://example.com/images/sydney.jpg",
+        jumbo_image: "https://example.com/images/sydney_jumbo.jpg"
     },
     {
         id: 9,
-        nome: "Bora Bora, Polinesia Francese",
-        partenza: "2025-04-10",
-        ritorno: "2025-04-20",
-        abstract: "Un paradiso tropicale con lagune cristalline, resort di lusso e una natura spettacolare da esplorare.",
-        image: "https://example.com/images/borabora.jpg"
+        nome: "Roma, Italia",
+        dataPartenza: "2026-02-05",
+        dataRitorno: "2026-02-20",
+        abstract: "Immergiti nella storia millenaria della Città Eterna.",
+        image: "https://example.com/images/roma.jpg",
+        jumbo_image: "https://example.com/images/roma_jumbo.jpg"
     },
     {
         id: 10,
-        nome: "Roma, Italia",
-        partenza: "2025-03-20",
-        ritorno: "2025-03-30",
-        abstract: "Passeggia tra le meraviglie dell’Antica Roma, gusta piatti tradizionali e scopri il fascino della Città Eterna.",
-        image: "https://example.com/images/roma.jpg"
+        nome: "Bangkok, Thailandia",
+        dataPartenza: "2026-03-01",
+        dataRitorno: "2026-03-15",
+        abstract: "Un mix affascinante di cultura, street food e templi dorati.",
+        image: "https://example.com/images/bangkok.jpg",
+        jumbo_image: "https://example.com/images/bangkok_jumbo.jpg"
     }
 ];
 
@@ -185,3 +195,5 @@ const contacts = [
         image: "https://example.com/images/valentina_deluca.jpg"
     }
 ];
+
+module.exports = { trips, contacts }
