@@ -1,7 +1,7 @@
 import '../style/NewTrip.css';
 import { Link } from "react-router-dom"
-import { useState, useEffect } from 'react';
-import { trips } from '../data/array';
+import { useState, useEffect, useContext } from 'react';
+import GlobalContext from '../contexts/GlobalContext';
 
 
 // mettiamo l'oggetto vuoto all'interno di una variabile
@@ -15,10 +15,10 @@ const initialFormData = {
     jumbo_image: ""
 }
 
+
 export default function NewTripPage() {
 
-    // creiamo una variabile di stato che conterrà il nostro array di oggetti
-    const [trip, setTrip] = useState(trips)
+    const { tripList, setTripList } = useContext(GlobalContext)
 
     // creiamo una variabile di stato che conterrà il nostro array di oggetti
     const [formData, setFormData] = useState(initialFormData);
@@ -43,7 +43,7 @@ export default function NewTripPage() {
 
         // inseriamo l'oggetto creato all'interno del nostro array
         // diciamo a setArticols di prenderci il nostro array corrente
-        setTrip(currenttrip =>
+        setTripList(currenttrip =>
             // copia l'array corrente 
             [...currenttrip,
             {
@@ -60,8 +60,8 @@ export default function NewTripPage() {
 
     useEffect(() => {
         console.log('questo è il mio form data', formData);
-        console.log('questo è il mio trip', trip);
-    }, [trip]); // Eseguito solo quando trip cambia
+        console.log('questo è il mio trip', tripList);
+    }, [tripList]); // Eseguito solo quando trip cambia
 
     return (
         <>

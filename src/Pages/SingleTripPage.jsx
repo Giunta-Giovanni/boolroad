@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom"
+import { useContext } from 'react';
+import GlobalContext from '../contexts/GlobalContext';
 
 export default function SingleTripPage() {
+
+    const { tripList, contactList } = useContext(GlobalContext);
+    console.log('sono su singletrippage', tripList, contactList);
+
     return (
         <>
             <h1>questa è la pagina singolo trip</h1>

@@ -25,7 +25,7 @@ export default function App() {
   const [contactList, setContactList] = useState(contacts);
 
   return (
-    <GlobalContext.Provider value={{ tripList, contactList }}>
+    <GlobalContext.Provider value={{ tripList, setTripList, contactList }}>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
