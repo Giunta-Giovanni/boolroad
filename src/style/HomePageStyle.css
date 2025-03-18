@@ -1,1 +1,19 @@
 /* style per home page */
+/* .card-container {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+} */
+
+.card-hover:hover {
+    transition: transform 0.8s;
+    transform: scale(1.1);
+
+}
+
+.card-hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}

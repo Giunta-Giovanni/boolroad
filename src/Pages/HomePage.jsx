@@ -1,6 +1,9 @@
 // Import dello style del jumbotron
 import '../style/jumbotronStyle.css';
 
+// Import dello style della pagina 
+import '../style/homePageStyle.css';
+
 // Import fontawsome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // Import icona search
