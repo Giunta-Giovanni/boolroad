@@ -46,6 +46,11 @@
     outline: none;
 }
 
+.jumbotron div form input:focus-visible {
+    background-color: white;
+    opacity: 0.8;
+}
+
 /* REGOLE SEARCH BUTTON */
 .jumbotron form button {
     height: 50px;
