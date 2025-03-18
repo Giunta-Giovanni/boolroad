@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { useContext } from 'react';
 import GlobalContext from '../contexts/GlobalContext';
 import ContactCard from '../components/ContactCard';
+import JumboSingleTrip from "../components/JumboSingleTrip";
+
 
 export default function SingleTripPage() {
 
@@ -10,9 +12,10 @@ export default function SingleTripPage() {
 
     return (
         <>
+            <JumboSingleTrip />
             <h1>questa è la pagina singolo trip</h1>
             <div id="accordion">
-                {contactList.map(contact => <ContactCard key = {contact.id} contactProp = {contact}/>)}
+                {contactList.map(contact => <ContactCard key={contact.id} contactProp={contact} />)}
             </div>
         </>
     )
