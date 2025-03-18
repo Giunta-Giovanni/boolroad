@@ -1,3 +1,12 @@
+li {
+  list-style: none;
+}
+
+li .nav-link{
+  text-decoration: none;
+  color: #14AE5C;
+}
+
 .custom-header {
     background-color: #00183b;
     padding: 10px 0;
@@ -5,20 +14,21 @@
   }
   
   .logo img {
-    height: 40px;
+    height: 50px;
+    padding-top: 5px;
+  }
+
+  .logo img:hover {
+    cursor: pointer;
   }
   
   .nav {
     gap: 15px;
   }
   
-  .nav-link {
-    color: #14AE5C;
-    font-weight: 500;
-  }
-  
-  .nav-link:hover {
-    color: #14AE5C;
+  li .nav-link:hover {
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   }
   
   .header-icons {
@@ -35,11 +45,16 @@
   
   .icon:hover {
     color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   }
   
-  .btn-primary {
+  .header-icons .btn-primary {
     padding: 6px 12px;
     font-weight: bold;
     background-color: #14AE5C;
+  }
+
+  .header-icons .btn-primary:hover {
+    background-color: #0d763e;
   }
   
