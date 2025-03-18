@@ -32,14 +32,11 @@ export default function App() {
             <Route index element={<HomePage />} />
             <Route path="/trip_page/:id" element={<SingleTripPage />} />
             <Route path="/New_trip" element={<NewTripPage />} />
-
-            {/* Rotta Not Found in caso di errato patch */}
             <Route path="*" element={<NotFoundPage />} />
-
           </Route>
         </Routes>
       </BrowserRouter>
-    </GlobalContext.Provider>
+    </GlobalContext.Provider >
 
   )
 }

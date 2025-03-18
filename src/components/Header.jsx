@@ -2,6 +2,7 @@ import React from "react";
 import "../style/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaMoon, FaFlag, FaGlobe } from "react-icons/fa";
+import { Navlink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,16 +17,13 @@ const Header = () => {
         <nav className="navbar">
           <ul className="nav">
             <li className="nav-item">
-              <a className="nav-link" href="HomePage.jsx">Home</a>
+              <NavLink to="/" className="nav-link">Home</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="TripsList.jsx">Viaggi</a>
+              <NavLink to="/" className="nav-link">Viaggi</NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="Contacts.jsx">Contatti</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="NewTripPage.jsx">Aggiungi un nuovo viaggio</a>
+              <NavLink to="/new_trip" className="nav-link">Aggiungi un nuovo viaggio</NavLink>
             </li>
           </ul>
         </nav>
