@@ -15,7 +15,7 @@ export const trips = [
         dataPartenza: "2025-07-10",
         dataRitorno: "2025-07-25",
         abstract: "Vivi l'energia della Grande Mela tra grattacieli, Broadway e Central Park.",
-        image: "/trip_img/new_york.jpg",
+        image: "/trip_img/newyork.jpg",
         jumbo_image: "/jumbo/newyork_jumbo.jpg"
     },
     {
