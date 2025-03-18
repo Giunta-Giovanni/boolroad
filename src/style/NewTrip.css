@@ -4,3 +4,11 @@ header {
 
     padding: 2rem 0;
 }
+
+.preview_image {
+    width: 80px;
+}
+
+.preview_jumbo {
+    width: 120px;
+}

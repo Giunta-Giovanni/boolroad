@@ -1,14 +1,71 @@
 import '../style/NewTrip.css';
-
 import { Link } from "react-router-dom"
+import { useState, useEffect } from 'react';
+import { trips } from '../data/array';
 
 
+// mettiamo l'oggetto vuoto all'interno di una variabile
+const initialFormData = {
+    //aggiungiamo tutte le proprietà che vogliamo mappare e assegniamo loro un valore iniziale.
+    nome: '',
+    dataPartenza: "",
+    dataRitorno: "",
+    abstract: "",
+    image: "",
+    jumbo_image: ""
+}
 
 export default function NewTripPage() {
+
+    // creiamo una variabile di stato che conterrà il nostro array di oggetti
+    const [trip, setTrip] = useState(trips)
+
+    // creiamo una variabile di stato che conterrà il nostro array di oggetti
+    const [formData, setFormData] = useState(initialFormData);
+
+    // Creiamo una funzione unica per gestire l'evento onChange dei nostri campi.
+    function setFieldValue(e) {
+        const { value, name, files } = e.target;
+
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: name === "image" || name === "jumbo_image" ? files[0] : value
+        }));
+    }
+
+    const previewImage = formData.image ? URL.createObjectURL(formData.image) : null;
+    const previewJumbo = formData.jumbo_image ? URL.createObjectURL(formData.jumbo_image) : null;
+
+
+    // Creiamo una funzione unica per gestire l'invio del form.
+    const handleSubmitForm = (e) => {
+        e.preventDefault()
+
+        // inseriamo l'oggetto creato all'interno del nostro array
+        // diciamo a setArticols di prenderci il nostro array corrente
+        setTrip(currenttrip =>
+            // copia l'array corrente 
+            [...currenttrip,
+            {
+                // aggiungi id in ordine crescente con condizione se vuota parti da 1 
+                id: currenttrip.length === 0 ?
+                    1 : currenttrip[currenttrip.length - 1].id + 1,
+                // aggiungi il form inserito dall'utente
+                ...formData
+            }
+            ]);
+        // resetta il form utilizzando il preset di initialFormData
+        setFormData(initialFormData)
+    }
+
+    useEffect(() => {
+        console.log('questo è il mio form data', formData);
+        console.log('questo è il mio trip', trip);
+    }, [trip]); // Eseguito solo quando trip cambia
+
     return (
         <>
 
-            {/* form per aggiungere un nuovo viaggio */}
             <div className="container">
                 <header>
                     <h1>Inserisci un nuovo viaggio</h1>
@@ -16,7 +73,7 @@ export default function NewTripPage() {
 
                 <section className='add-trip-sections'>
                     {/* form */}
-                    <form>
+                    <form onSubmit={handleSubmitForm}>
                         <div className='row'>
                             <div className="col-6 mb-3">
 
@@ -24,9 +81,9 @@ export default function NewTripPage() {
                                 <label htmlFor="input-location" className="form-label">Location</label>
                                 <input
                                     type="text"
-                                    name="location"
-                                    // value={formDataObj.location}
-                                    // onChange={setFieldValue}
+                                    name="nome"
+                                    value={formData.nome}
+                                    onChange={setFieldValue}
                                     className="form-control"
                                     id="input-location"
                                     placeholder="Inserisci la destinazione"
@@ -38,9 +95,9 @@ export default function NewTripPage() {
                                 <label htmlFor="input-departure" className="form-label">Departure Date</label>
                                 <input
                                     type="date"
-                                    name="departure"
-                                    // value={formDataObj.departure}
-                                    // onChange={setFieldValue}
+                                    name="dataPartenza"
+                                    value={formData.dataPartenza}
+                                    onChange={setFieldValue}
                                     className="form-control"
                                     id="input-departure"
                                     placeholder="Data di partenza"
@@ -52,9 +109,9 @@ export default function NewTripPage() {
                                 <label htmlFor="input-return" className="form-label">Return Date</label>
                                 <input
                                     type="date"
-                                    name="return"
-                                    // value={formDataObj.return}
-                                    // onChange={setFieldValue}
+                                    name="dataRitorno"
+                                    value={formData.dataRitorno}
+                                    onChange={setFieldValue}
                                     className="form-control"
                                     id="input-return"
                                     placeholder="Data di ritorno"
@@ -68,8 +125,8 @@ export default function NewTripPage() {
                                 <label htmlFor="abstract" className="form-label">Abstract</label>
                                 <textarea
                                     name="abstract"
-                                    // value={formDataObj.abstract}
-                                    // onChange={setFieldValue}
+                                    value={formData.abstract}
+                                    onChange={setFieldValue}
                                     className="form-control"
                                     id="abstract"
                                     rows="3"
@@ -88,15 +145,15 @@ export default function NewTripPage() {
                                     type="file"
                                     id="image"
                                     name="image"
-                                // onChange={handleFileChange}
+                                    onChange={setFieldValue}
                                 />
-                                {/* {previewCover && (
-                                <img
-                                    src={previewCover}
-                                    className='preview_cover'
-                                    alt='preview'
-                                />
-                            )} */}
+                                {previewImage && (
+                                    <img
+                                        src={previewImage}
+                                        className='preview_image'
+                                        alt='preview'
+                                    />
+                                )}
                             </div>
                             <div className="mb-3 col">
                                 <div>
@@ -106,15 +163,15 @@ export default function NewTripPage() {
                                     type="file"
                                     id="jumbo_image"
                                     name="jumbo_image"
-                                // onChange={handleFileChange}
+                                    onChange={setFieldValue}
                                 />
-                                {/* {previewBg && (
-                                <img
-                                    src={previewBg}
-                                    className='preview_bg'
-                                    alt='preview'
-                                />
-                            )} */}
+                                {previewJumbo && (
+                                    <img
+                                        src={previewJumbo}
+                                        className='preview_jumbo'
+                                        alt='preview'
+                                    />
+                                )}
                             </div>
                         </section>
 
