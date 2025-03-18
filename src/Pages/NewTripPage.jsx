@@ -29,12 +29,12 @@ export default function NewTripPage() {
 
         setFormData((prevData) => ({
             ...prevData,
-            [name]: name === "image" || name === "jumbo_image" ? files[0] : value
+            [name]: name === "image" || name === "jumbo_image" ? URL.createObjectURL(files[0]) : value
         }));
     }
 
-    const previewImage = formData.image ? URL.createObjectURL(formData.image) : null;
-    const previewJumbo = formData.jumbo_image ? URL.createObjectURL(formData.jumbo_image) : null;
+    const previewImage = formData.image ? (formData.image) : null;
+    const previewJumbo = formData.jumbo_image ? (formData.jumbo_image) : null;
 
 
     // Creiamo una funzione unica per gestire l'invio del form.
