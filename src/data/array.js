@@ -1,5 +1,5 @@
 // array destinazioni
-const trips = [
+export const trips = [
     {
         id: 1,
         nome: "Tokyo, Giappone",
@@ -93,7 +93,7 @@ const trips = [
 ];
 
 // array contatti
-const contacts = [
+export const contacts = [
     {
         id: 1,
         nome: "Luca",
@@ -195,5 +195,3 @@ const contacts = [
         image: "https://example.com/images/valentina_deluca.jpg"
     }
 ];
-
-module.exports = { trips, contacts }
