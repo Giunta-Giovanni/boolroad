@@ -11,7 +11,7 @@ export default function TripCard({ tripProp }) {
     const { id, nome, dataPartenza, dataRitorno, image } = tripProp;
     return (
 
-        <Link to={`trip_page/${id}`} className="text-decoration-none">
+        <Link to={`trip_page/${id}`} className="text-decoration-none col-sm-12 col-md-6 col-lg-3">
             <div className="card">
                 <div className="card-image">
                     <img src={image} className="card-img-top rounded-4" alt={`Image for trip to ${nome}`} />
