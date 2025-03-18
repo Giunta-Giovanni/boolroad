@@ -10,20 +10,29 @@ import NotFoundPage from "./Pages/NotFoundPage"
 // importiamo il layout
 import DefaultLayout from "./Layouts/DefaultLayout"
 
+// import del contenuto globale
+import GlobalContext from "./contexts/GlobalContext"
+
+// import dei dati fittizi per i viaggi
+import { trips, contacts } from "./data/array"
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/trip_page/:id" element={<SingleTripPage />} />
-          <Route path="/New_trip" element={<NewTripPage />} />
-          <Route path="*" element={<NotFoundPage />} />
+    <GlobalContext.Provider value={{ trips, contacts }}>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/trip_page/:id" element={<SingleTripPage />} />
+            <Route path="/New_trip" element={<NewTripPage />} />
 
-        </Route>
-      </Routes>
-    </BrowserRouter>
+            {/* Rotta Not Found in caso di errato patch */}
+            <Route path="*" element={<NotFoundPage />} />
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </GlobalContext.Provider>
 
   )
 }

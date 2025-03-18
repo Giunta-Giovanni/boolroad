@@ -1,9 +1,12 @@
+// import della card contentente i dettagli del viaggio in corso
 import TripCard from "./TripCard"
 
+
+
+// TripsList.jsx
 export default function TripsList() {
     return (
         <>
-            <h1>TRIP LIST</h1>
             <TripCard />
         </>
     )
