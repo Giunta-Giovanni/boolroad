@@ -4,13 +4,15 @@ import { faPlaneDeparture } from '@fortawesome/free-solid-svg-icons'; // import 
 import { faPlaneArrival } from "@fortawesome/free-solid-svg-icons"; // import icon aereo di arrivo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 // TripCard.jsx
 export default function TripCard({ tripProp }) {
     // destrutturazione delle props
     const { id, nome, dataPartenza, dataRitorno, image } = tripProp;
     return (
+
         <Link to={`trip_page/${id}`} className="text-decoration-none">
-            <div className="card col">
+            <div className="card">
                 <div className="card-image">
                     <img src={image} className="card-img-top rounded-4" alt={`Image for trip to ${nome}`} />
                 </div>

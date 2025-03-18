@@ -1,4 +1,4 @@
-.card {
+#accordion .card {
     display: flex;
     justify-content: space-evenly;
     padding: 100px;
