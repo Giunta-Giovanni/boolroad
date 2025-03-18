@@ -15,7 +15,7 @@ const Header = () => {
 
         {/* Navbar */}
         <nav className="navbar">
-          <ul className="nav">
+          <ul className="nav fw-bolder">
             <li className="nav-item">
               <NavLink to="/" className="nav-link">Home</NavLink>
             </li>
