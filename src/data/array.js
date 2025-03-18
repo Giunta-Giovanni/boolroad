@@ -6,7 +6,7 @@ export const trips = [
         dataPartenza: "2025-06-15",
         dataRitorno: "2025-06-30",
         abstract: "Esplora la città futuristica di Tokyo tra tecnologia, cultura pop e tradizione.",
-        image: "https://example.com/images/tokyo.jpg",
+        image: "/trip_img/tokyo.jpg",
         jumbo_image: "https://example.com/images/tokyo_jumbo.jpg"
     },
     {
@@ -15,7 +15,7 @@ export const trips = [
         dataPartenza: "2025-07-10",
         dataRitorno: "2025-07-25",
         abstract: "Vivi l'energia della Grande Mela tra grattacieli, Broadway e Central Park.",
-        image: "https://example.com/images/new_york.jpg",
+        image: "/trip_img/new york.jpg",
         jumbo_image: "https://example.com/images/new_york_jumbo.jpg"
     },
     {
@@ -24,7 +24,7 @@ export const trips = [
         dataPartenza: "2025-08-05",
         dataRitorno: "2025-08-20",
         abstract: "Rilassati tra le case bianche e le acque cristalline di Santorini.",
-        image: "https://example.com/images/santorini.jpg",
+        image: "/trip_img/santorini.jpg",
         jumbo_image: "https://example.com/images/santorini_jumbo.jpg"
     },
     {
@@ -33,7 +33,7 @@ export const trips = [
         dataPartenza: "2025-09-01",
         dataRitorno: "2025-09-15",
         abstract: "Scopri il lusso sfrenato e l'architettura avveniristica di Dubai.",
-        image: "https://example.com/images/dubai.jpg",
+        image: "/trip_img/dubai.jpg",
         jumbo_image: "https://example.com/images/dubai_jumbo.jpg"
     },
     {
@@ -42,7 +42,7 @@ export const trips = [
         dataPartenza: "2025-10-10",
         dataRitorno: "2025-10-25",
         abstract: "Goditi un paradiso tropicale con spiagge bianche e mare cristallino.",
-        image: "https://example.com/images/maldive.jpg",
+        image: "/trip_img/maldive.jpg",
         jumbo_image: "https://example.com/images/maldive_jumbo.jpg"
     },
     {
@@ -51,7 +51,7 @@ export const trips = [
         dataPartenza: "2025-11-05",
         dataRitorno: "2025-11-20",
         abstract: "Un viaggio nella storia tra le rovine misteriose della civiltà Inca.",
-        image: "https://example.com/images/machu_picchu.jpg",
+        image: "/trip_img/machu_picchu-llama.jpg",
         jumbo_image: "https://example.com/images/machu_picchu_jumbo.jpg"
     },
     {
@@ -60,7 +60,7 @@ export const trips = [
         dataPartenza: "2025-12-01",
         dataRitorno: "2025-12-15",
         abstract: "Romanticismo, arte e cultura nella città dell'amore.",
-        image: "https://example.com/images/parigi.jpg",
+        image: "/trip_img/parigi.jpg",
         jumbo_image: "https://example.com/images/parigi_jumbo.jpg"
     },
     {
@@ -69,7 +69,7 @@ export const trips = [
         dataPartenza: "2026-01-10",
         dataRitorno: "2026-01-25",
         abstract: "Scopri le meraviglie di Sydney tra l'Opera House e le spiagge dorate.",
-        image: "https://example.com/images/sydney.jpg",
+        image: "/trip_img/sydney.jpg",
         jumbo_image: "https://example.com/images/sydney_jumbo.jpg"
     },
     {
@@ -78,7 +78,7 @@ export const trips = [
         dataPartenza: "2026-02-05",
         dataRitorno: "2026-02-20",
         abstract: "Immergiti nella storia millenaria della Città Eterna.",
-        image: "https://example.com/images/roma.jpg",
+        image: "/trip_img/roma.jpg",
         jumbo_image: "https://example.com/images/roma_jumbo.jpg"
     },
     {
@@ -87,7 +87,7 @@ export const trips = [
         dataPartenza: "2026-03-01",
         dataRitorno: "2026-03-15",
         abstract: "Un mix affascinante di cultura, street food e templi dorati.",
-        image: "https://example.com/images/bangkok.jpg",
+        image: "/trip_img/bangkok.jpg",
         jumbo_image: "https://example.com/images/bangkok_jumbo.jpg"
     }
 ];
