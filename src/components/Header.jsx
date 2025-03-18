@@ -16,13 +16,16 @@ const Header = () => {
         <nav className="navbar">
           <ul className="nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">Home</a>
+              <a className="nav-link" href="HomePage.jsx">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Servizi</a>
+              <a className="nav-link" href="TripsList.jsx">Viaggi</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contatti</a>
+              <a className="nav-link" href="Contacts.jsx">Contatti</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="NewTripPage.jsx">Aggiungi un nuovo viaggio</a>
             </li>
           </ul>
         </nav>

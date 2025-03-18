@@ -2,59 +2,62 @@ li {
   list-style: none;
 }
 
-li .nav-link{
+li .nav-link {
   text-decoration: none;
   color: #14AE5C;
 }
 
+li .nav-link:active {
+  color: red;
+}
+
 .custom-header {
-    background-color: #00183b;
-    padding: 10px 0;
-    box-shadow: 0px 4px 10px black;
-  }
-  
-  .logo img {
-    height: 50px;
-    padding-top: 5px;
-  }
+  background-color: #00183b;
+  padding: 10px 0;
+  box-shadow: 0px 4px 10px black;
+}
 
-  .logo img:hover {
-    cursor: pointer;
-  }
-  
-  .nav {
-    gap: 15px;
-  }
-  
-  li .nav-link:hover {
-    color: white;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .header-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .icon {
-    font-size: 20px;
-    cursor: pointer;
-    color: #14AE5C;
-  }
-  
-  .icon:hover {
-    color: white;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  .header-icons .btn-primary {
-    padding: 6px 12px;
-    font-weight: bold;
-    background-color: #14AE5C;
-  }
+.logo img {
+  height: 50px;
+  padding-top: 5px;
+}
 
-  .header-icons .btn-primary:hover {
-    background-color: #0d763e;
-  }
-  
+.logo img:hover {
+  cursor: pointer;
+}
+
+.nav {
+  gap: 15px;
+}
+
+li .nav-link:hover {
+  color: white;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #14AE5C;
+}
+
+.icon:hover {
+  color: white;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header-icons .btn-primary {
+  padding: 6px 12px;
+  font-weight: bold;
+  background-color: #14AE5C;
+}
+
+.header-icons .btn-primary:hover {
+  background-color: #0d763e;
+}
