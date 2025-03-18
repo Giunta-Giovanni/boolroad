@@ -1,0 +1,69 @@
+.jumbotron-single-trip {
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    background-position: center 35%;
+}
+
+.jumbotron-single-trip div {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.jumbotron-single-trip div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+
+/* REGOLE TEXT BAR  */
+.jumbotron-single-trip div form input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    font-size: 20px;
+    margin-right: 10px;
+    opacity: 0.8;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid green;
+}
+
+.jumbotron-single-trip div form input {
+    border: 2px solid gray;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.jumbotron-single-trip div form input:focus {
+    border-color: green;
+    outline: none;
+}
+
+.jumbotron-single-trip div form input:focus-visible {
+    background-color: white;
+    opacity: 1;
+}
+
+/* REGOLE SEARCH BUTTON */
+.jumbotron-single-trip form button {
+    height: 50px;
+    padding: 10px;
+    font-size: 23px;
+    background-color: rgba(24, 24, 24, 0);
+    border: 1px solid rgba(248, 248, 248, 0);
+    color: white;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron-single-trip form button:hover {
+    background-color: #ffffff94;
+    color: #14ae5c;
+}

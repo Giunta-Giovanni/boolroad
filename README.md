@@ -10,17 +10,17 @@
  • Energia del viaggio: Il design deve trasmettere dinamismo e semplicità.
 
 <!-- HEADER -->
-- Logo
-- Navbar 
-   1. VOYAGE PAGE 
-   2. CONTACTS PAGE
-   3. NEW VOYAGE PAGE
+- Logo√
+- Navbar √
+   1. VOYAGE PAGE √
+   2. CONTACTS PAGE√
+   3. NEW VOYAGE PAGE√
 
 
 
 <!-- HOMEPAGE/ VOYAGE PAGE  -->
 - Una schermata che visualizzi la lista dei viaggi attualmente in corso (con destinazione e data di inizio e
-fine)
+fine)√
 
 <!-- CONTACTS PAGE -->
 - La pagina del singolo viaggio mostrerà una schermata di rubrica contatti, in cui siano presenti tutti i
