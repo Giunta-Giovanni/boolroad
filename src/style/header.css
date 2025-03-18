@@ -61,3 +61,26 @@ li .nav-link:hover {
 .header-icons .btn-primary:hover {
   background-color: #0d763e;
 }
+
+.menu {
+  display: none;
+}
+
+/* Responsive Mobile */
+@media screen and (max-width: 767px) {
+  .custom-header nav {
+    display: none;
+  }
+
+  .open {
+    display: inline;
+  }
+
+  .menu {
+    display: inline;
+  }
+
+  #menu-mobile {
+    display: block;
+  }
+}
