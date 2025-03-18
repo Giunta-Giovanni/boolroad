@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px;
+}
+
+#accordion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 20px;
+    gap: 30px;
+}
+
+.fa-chevron-down,
+.fa-chevron-up {
+    color: black;
+}

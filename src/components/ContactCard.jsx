@@ -1,32 +1,42 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { faUser, faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import "../style/ContactCard.css"
 
-export default function ContactCard({contactProp}){
-    const {nome, cognome , email, codiceFiscale, telefono} = contactProp;
-    const [isOpen, setIsOpen] = useState (false)
+export default function ContactCard({ contactProp }) {
+    const { nome, cognome, email, codiceFiscale, telefono } = contactProp;
+    const [isOpen, setIsOpen] = useState(false);
 
+    return (
 
-return (
         <div className="card">
-            <div className="card-header" id="headingOne">
-                <h5 className="mb-0">
-                    <span>{nome} {cognome}</span>
-                    <button 
-                        className="btn btn-link" 
+            <div className="singleCard">
+                <div className="card-header d-flex">
+                    <h5 className="mb-0">
+                        <span>{nome} {cognome}</span>
+                    </h5>
+                    <button
+                        className="btn btn-link"
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        {isOpen ? "Nascondi info contatto" : "Mostra info contatto"}
+                        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
                     </button>
-                </h5>
-            </div>
+                </div>
 
-            <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            {isOpen && (
-                <div className="card-body">
-                      <p>Telefono: {telefono}</p>
-                      <p>Email: {email}</p> 
-                      <p>Codice Fiscale: {codiceFiscale}</p>         
-                </div>)}
-            </div>    
-        </div>    
-    )
+
+
+                <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    {isOpen && (
+                        <div className="card-body">
+                            <p>Telefono: {telefono}</p>
+                            <p>Email: {email}</p>
+                            <p>Codice Fiscale: {codiceFiscale}</p>
+                        </div>
+                    )}
+                </div>
+
+            </div >
+        </div>
+
+    );
 }
