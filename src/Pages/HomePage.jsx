@@ -1,6 +1,13 @@
+// Import dello style del jumbotron
+import '../style/jumbotronStyle.css';
+
+// Import fontawsome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../style/HomePageStyle.css';
+// Import icona search
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+// Import del componente TripsList
+import TripsList from '../components/TripsList';
 
 export default function HomePage() {
     return (
@@ -13,6 +20,9 @@ export default function HomePage() {
                         <button>{<FontAwesomeIcon icon={faSearch} />}</button>
                     </form>
                 </div>
+            </section>
+            <section className='container'>
+                <TripsList />
             </section>
         </>
     )
