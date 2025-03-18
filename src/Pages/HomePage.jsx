@@ -16,7 +16,7 @@ export default function HomePage() {
             <section className='jumbotron'>
                 <div>
                     <form action="#">
-                        <input type="text" placeholder='Cerca un viaggio!' />
+                        <input type="text" placeholder={'Cerca un viaggio!'} />
                         <button>{<FontAwesomeIcon icon={faSearch} />}</button>
                     </form>
                 </div>
