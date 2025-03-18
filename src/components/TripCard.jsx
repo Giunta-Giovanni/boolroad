@@ -9,16 +9,25 @@ export default function TripCard({ tripProp }) {
     // destrutturazione delle props
     const { id, nome, dataPartenza, dataRitorno, image } = tripProp;
     return (
-        <div className="card-hover col-12 col-sm-12 col-md-4 col-lg-3" style={{ width: "18rem" }}>
-            <span></span>
-            <Link to={`trip_page/${id}`}><img src={image} className="card-img-top rounded-4" alt={nome} style={{ width: "100%", height: "250px" }} /></Link>
-            <Link to={`trip_page/${id}`} className="text-decoration-none text-dark">
-                <div className="card-body p-2">
-                    <h5 className="card-title fw-bolder mt-1">{nome}</h5>
-                    <span><FontAwesomeIcon icon={faPlaneDeparture} className="text-primary" /> {dataPartenza}</span><br />
-                    <span><FontAwesomeIcon icon={faPlaneArrival} className="text-success" /> {dataRitorno}</span>
+        <Link to={`trip_page/${id}`} className="text-decoration-none">
+            <div className="card col">
+                <div className="card-image">
+                    <img src={image} className="card-img-top rounded-4" alt={`Image for trip to ${nome}`} />
                 </div>
-            </Link>
-        </div>
+                <div className="card-body p-3">
+                    <h5 className="card-title fw-bolder mt-2 text-center">{nome}</h5>
+                    <div className="d-flex justify-content-between mt-3">
+                        <span className="d-flex align-items-center">
+                            <FontAwesomeIcon icon={faPlaneDeparture} className="text-primary me-2" /> {dataPartenza}
+                        </span>
+                        <span className="d-flex align-items-center">
+                            <FontAwesomeIcon icon={faPlaneArrival} className="text-success me-2" /> {dataRitorno}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </Link>
+
+
     )
 }
