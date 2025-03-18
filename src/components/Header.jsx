@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container d-flex align-items-center justify-content-between">
         {/* Logo */}
         <div className="logo">
-          <img src="/logo.png" alt="Logo" />
+          <img src="/logo_desktop.png" alt="Logo" />
         </div>
 
         {/* Navbar */}
