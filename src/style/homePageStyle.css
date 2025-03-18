@@ -1,8 +1,8 @@
 .jumbotron {
-    background-image: url('../public/jumbo/jumbo_homepage.jpg');
+    background-image: url('../../jumbo/jumbo_homepage.jpg');
     background-size: cover;
     background-position: center;
-    height: 650px;
+    height: 550px;
     background-position: center 35%;
 }
 
@@ -15,7 +15,14 @@
     height: 100%;
 }
 
-.jumbotron div input {
+.jumbotron div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.jumbotron div form input {
     width: 100%;
     height: 50px;
     border: none;
@@ -24,4 +31,15 @@
     font-size: 20px;
     margin-right: 10px;
     opacity: 0.5;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron form button {
+    height: 50px;
+    padding: 10px;
+    font-size: 23px;
+    background-color: rgba(248, 248, 248, 0);
+    border: 1px solid rgba(248, 248, 248, 0);
+    color: white;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
