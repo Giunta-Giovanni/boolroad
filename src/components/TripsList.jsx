@@ -12,7 +12,12 @@ export default function TripsList() {
 
     return (
         <>
-            {tripList.map(trip => <TripCard key={trip.id} tripProp={trip} />)}
+
+            <h1>Viaggi in corso </h1>
+            <div className="row d-flex justify-content-center gap-3 mt-5">
+                {tripList.map(trip => <TripCard key={trip.id} tripProp={trip} />)}
+            </div >
+
         </>
     )
 }

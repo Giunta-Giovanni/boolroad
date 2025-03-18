@@ -2,7 +2,7 @@ import React from "react";
 import "../style/header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaMoon, FaFlag, FaGlobe } from "react-icons/fa";
-import { Navlink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (

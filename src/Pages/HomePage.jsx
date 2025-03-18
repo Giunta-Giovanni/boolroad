@@ -21,7 +21,7 @@ export default function HomePage() {
                     </form>
                 </div>
             </section>
-            <section className='container'>
+            <section className='container mt-5 mb-5'>
                 <TripsList />
             </section>
         </>
