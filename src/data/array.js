@@ -1,5 +1,5 @@
 // array destinazioni
-const destinazioni = [
+const trips = [
     {
         id: 1,
         nome: "Tokyo, Giappone",
@@ -83,7 +83,7 @@ const destinazioni = [
 ];
 
 // array contatti
-const contatti = [
+const contacts = [
     {
         id: 1,
         nome: "Luca",
