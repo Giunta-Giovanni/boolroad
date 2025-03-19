@@ -2,12 +2,13 @@
 
 🖌️ Design e UX/UI
  • Stile: Minimal, pulito, accattivante.  
-     <!-- cercare un font -->
-
+ • Energia del viaggio: Il design deve trasmettere dinamismo e semplicità.
  • Palette Colori: Verde, Blu e Bianco (in linea con il logo aziendale).
  • Interfaccia: User-friendly con animazioni leggere e icone intuitive
  • Responsive: Mobile e Pc
- • Energia del viaggio: Il design deve trasmettere dinamismo e semplicità.
+     <!-- cercare un font -->
+
+
 
 <!-- HEADER -->
 - Logo√

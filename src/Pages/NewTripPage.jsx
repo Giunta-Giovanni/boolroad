@@ -78,7 +78,7 @@ export default function NewTripPage() {
                             <div className="col-6 mb-3">
 
                                 {/* Location */}
-                                <label htmlFor="input-location" className="form-label">Location</label>
+                                <label htmlFor="input-location" className="form-label">Destinazione</label>
                                 <input
                                     type="text"
                                     name="nome"
@@ -92,7 +92,7 @@ export default function NewTripPage() {
                             <div className="col mb-3">
 
                                 {/* Departure */}
-                                <label htmlFor="input-departure" className="form-label">Departure Date</label>
+                                <label htmlFor="input-departure" className="form-label">Data di partenza</label>
                                 <input
                                     type="date"
                                     name="dataPartenza"
@@ -106,7 +106,7 @@ export default function NewTripPage() {
 
                             <div className="col mb-3">
                                 {/* Return */}
-                                <label htmlFor="input-return" className="form-label">Return Date</label>
+                                <label htmlFor="input-return" className="form-label">Data di arrivo</label>
                                 <input
                                     type="date"
                                     name="dataRitorno"
@@ -122,7 +122,7 @@ export default function NewTripPage() {
                         <div className="row">
                             <div className="col mb-3">
                                 {/* Abstract */}
-                                <label htmlFor="abstract" className="form-label">Abstract</label>
+                                <label htmlFor="abstract" className="form-label">Descrizione del viaggio</label>
                                 <textarea
                                     name="abstract"
                                     value={formData.abstract}
@@ -177,10 +177,10 @@ export default function NewTripPage() {
 
                         <div className="d-flex justify-content-end pb-3">
                             <Link to='/'>
-                                <button type="button" className="btn btn-secondary mx-3">Back</button>
+                                <button type="button" className="btn btn-secondary mx-3">Indietro</button>
                             </Link>
 
-                            <button type="submit" className="btn btn-primary">Add</button>
+                            <button type="submit" className="btn btn-primary">Aggiungi</button>
                         </div>
                     </form>
                 </section>
