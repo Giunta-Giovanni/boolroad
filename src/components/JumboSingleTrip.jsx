@@ -36,14 +36,19 @@ export default function JumboSingleTrip(props) {
                 className='jumbotron-single-trip'
                 style={{ backgroundImage: `url(${jumboimage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
+
+
                 <div>
+                    <div className='header-singleTrip-jumbo'>
+                        <h1>{singolTrip.nome}</h1>
+                    </div>
                     <form action="#">
                         <input
                             type="text"
-                            placeholder={'Cerca per Nome'}
+                            placeholder={'Cerca Contatto'}
                             value={userSearch}
                             onChange={handleChange} />
-                        <button>{<FontAwesomeIcon icon={faSearch} />}</button>
+                        {/* <button>{<FontAwesomeIcon icon={faSearch} />}</button> */}
                     </form>
                 </div>
             </section>
