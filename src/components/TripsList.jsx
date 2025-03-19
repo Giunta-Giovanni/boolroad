@@ -12,10 +12,10 @@ export default function TripsList() {
 
     return (
         <>
-
+            {/* titolo */}
             <h1 className="fw-bolder text-center">Viaggi in corso </h1>
 
-            {/* problem in row */}
+            {/* sezione delle card nella home */}
             <div className="row justify-content-center gap-5 mt-5 card-home">
                 {tripList.map(trip => <TripCard key={trip.id} tripProp={trip} />)}
             </div >
