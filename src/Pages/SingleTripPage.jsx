@@ -13,10 +13,13 @@ export default function SingleTripPage() {
     return (
         <>
             <JumboSingleTrip id={id} tripProp={tripList} />
-            <h1>Lista viaggiatori</h1>
-            <div id="accordion">
-                {contactList.map(contact => <ContactCard key={contact.id} contactProp={contact} />)}
-            </div>
+            <section className="travel-list-section">
+                <h1 id="travel-list">Lista viaggiatori</h1>
+                <div id="accordion">
+                    {contactList.map(contact => <ContactCard key={contact.id} contactProp={contact} />)}
+                </div>
+            </section>
+
         </>
     )
 }

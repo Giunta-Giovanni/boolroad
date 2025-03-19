@@ -1,5 +1,4 @@
 .jumbotron-single-trip {
-    height: 100px;
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -66,4 +65,22 @@
 .jumbotron-single-trip form button:hover {
     background-color: #ffffff94;
     color: #14ae5c;
+}
+
+
+/* Responsività */
+@media (max-width: 768px) {
+    .jumbotron-single-trip {
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        background-position: center 35%;
+    }
+
+    .jumbotron-single-trip div form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
 }

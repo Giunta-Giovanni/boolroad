@@ -61,3 +61,20 @@
     color: white;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
 }
+
+/* Responsività */
+@media (max-width: 768px) {
+    .jumbotron {
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        background-position: center 35%;
+    }
+
+    .jumbotron div form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+}
