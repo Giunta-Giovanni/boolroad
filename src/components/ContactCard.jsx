@@ -9,33 +9,22 @@ export default function ContactCard({ contactProp }) {
 
     return (
 
-        <div className="card">
-            <div className="singleCard">
-                <div className="card-header d-flex">
-                    <h5 className="mb-0">
-                        <span>{nome} {cognome}</span>
-                    </h5>
-                    <button
-                        className="btn btn-link"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
-                    </button>
+        <div className="contact-card">
+            <div className="card-header" onClick={() => setIsOpen(!isOpen)}>
+                <div className="card-title">
+                    <FontAwesomeIcon icon={faUser} className="user" />
+                    <h5>{nome} {cognome}</h5>
                 </div>
+                <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+            </div>
 
-
-
-                <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    {isOpen && (
-                        <div className="card-body">
-                            <p>Telefono: {telefono}</p>
-                            <p>Email: {email}</p>
-                            <p>Codice Fiscale: {codiceFiscale}</p>
-                        </div>
-                    )}
+            {isOpen && (
+                <div className="card-body">
+                    <p><strong>Telefono:</strong> {telefono}</p>
+                    <p><strong>Email:</strong> {email}</p>
+                    <p><strong>Codice Fiscale:</strong> {codiceFiscale}</p>
                 </div>
-
-            </div >
+            )}
         </div>
 
     );
