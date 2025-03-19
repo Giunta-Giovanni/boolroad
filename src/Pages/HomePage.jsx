@@ -1,31 +1,36 @@
-// Import dello style del jumbotron
-import '../style/jumbotronStyle.css';
-
 // Import dello style della pagina 
 import '../style/homePageStyle.css';
-
-// Import fontawsome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// Import icona search
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useState, useMemo, useContext } from 'react';
+import GlobalContext from "../contexts/GlobalContext"
 
 // Import del componente TripsList
 import TripsList from '../components/TripsList';
+import Jumbotron from '../components/Jumbotron';
+
+
 
 export default function HomePage() {
+    // Destruirizzo il valore tripList dal GlobalContext
+    const { tripList } = useContext(GlobalContext)
+
+    // inizializzo lo stato per la ricerca e lo passo come props al Jumbotron
+    const [tripSearch, setTripSearch] = useState('')
+
+    // filtro i contatti in base al input inserito dall'utente, verifico che il nome del contatto includa la stringa inserita dall'utente
+    const filteredTrip = useMemo(() => {
+        return tripList.filter(trip =>
+            // verifico che il nome e cognome del contatto includa la stringa inserita dall'utente
+            trip.nome.toLowerCase().includes(tripSearch.toLowerCase()) ||
+            trip.dataPartenza.includes(tripSearch) ||
+            trip.dataRitorno.includes(tripSearch)
+        );
+    }, [tripSearch, tripList]);
+
     return (
         <>
-            {/* <h1>questa è la home</h1> */}
-            <section className='jumbotron'>
-                <div>
-                    <form action="#">
-                        <input type="text" placeholder={'Cerca un viaggio!'} />
-                        <button>{<FontAwesomeIcon icon={faSearch} />}</button>
-                    </form>
-                </div>
-            </section>
+            <Jumbotron tripSearch={tripSearch} setTripSearch={setTripSearch} />
             <section className='container mt-5 mb-5'>
-                <TripsList />
+                <TripsList filteredTrip={filteredTrip} />
             </section>
         </>
     )
