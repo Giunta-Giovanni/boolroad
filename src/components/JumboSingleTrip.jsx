@@ -8,13 +8,8 @@ import '../style/JumboSingleTrip.css';
 
 export default function JumboSingleTrip(props) {
 
-<<<<<<< HEAD
-    // destrutturiamoci le props
-    const { id, tripProp } = props;
-=======
     // importo userFilter e setUserFilter da props
     const { id, tripProp, userSearch, setUserSearch } = props;
->>>>>>> 5d22f1dc970d7b047cf28180893f7fca1ebaeaca
 
     // troviamoci l'id del trip
     const singolTrip = tripProp[`${id - 1}`]
