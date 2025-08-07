@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useContext } from 'react';
 import GlobalContext from '../contexts/GlobalContext';
 import ContactCard from '../components/ContactCard';
